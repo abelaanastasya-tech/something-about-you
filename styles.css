@@ -1,0 +1,499 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #A7D8F0;
+    color: white;
+    font-family: Georgia, serif;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+}
+
+.page.active {
+    display: flex;
+}
+
+h1 {
+    font-size: clamp(25px, 6vw, 40px);
+    margin: 15px 0 8px;
+}
+
+p {
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    background: white;
+    color: #8c63d9;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+.character {
+    position: relative;
+    width: 230px;
+    height: 190px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.head {
+    font-size: 65px;
+    position: absolute;
+    left: 15px;
+    top: 40px;
+}
+
+.cake {
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.cake div {
+    font-size: 65px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.envelope {
+    width: 280px;
+    height: 190px;
+    background: #fffaf0;
+    border: 4px solid #dfd0a8;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: 0.4s;
+}
+
+.envelope:hover {
+    transform: scale(1.03);
+}
+
+.envelope-body {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    z-index: 3;
+}
+
+.envelope-flap {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 136px solid transparent;
+    border-right: 136px solid transparent;
+    border-top: 100px solid #eee3c5;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    transform-origin: top;
+    transition: 0.8s;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.letter {
+    background: #fffdf7;
+    color: #65708a;
+    width: min(90vw, 600px);
+    max-height: 65vh;
+    padding: 30px;
+    overflow-y: auto;
+    border-radius: 5px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+    transform: rotate(-1deg);
+}
+
+.letter h2 {
+    color: #e88fa8;
+    margin-top: 0;
+}
+
+.letter-text {
+    text-align: left;
+    line-height: 1.7;
+}
+
+.music-card {
+    width: min(90vw, 450px);
+    background: rgba(255,255,255,0.85);
+    color: #6c8ca3;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    margin-bottom: 25px;
+}
+
+.music-cover {
+    font-size: 70px;
+}
+
+.music-info h2 {
+    margin-bottom: 5px;
+}
+
+.music-controls button {
+    margin: 5px;
+}
+
+#heartRain {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.rain-heart {
+    position: absolute;
+    top: -50px;
+    font-size: 25px;
+    animation: rain linear forwards;
+}
+
+@keyframes rain {
+    from {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.final-character {
+    font-size: 100px;
+    z-index: 5;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+} .character {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.character {
+    position: relative;
+    width: 230px;
+    height: 190px;
+    animation: float 3s ease-in-out infinite;
+} .cake {
+    position: relative;
+    width: 180px;
+    height: 150px;
+    margin: 30px auto;
+    animation: cakeFloat 2s ease-in-out infinite;
+}
+
+.cake-body {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 150px;
+    height: 90px;
+    background: #f5b6c8;
+    border-radius: 15px 15px 25px 25px;
+}
+
+.cake-top {
+    position: absolute;
+    bottom: 75px;
+    left: 10px;
+    width: 160px;
+    height: 35px;
+    background: #fff0f5;
+    border-radius: 50%;
+}
+
+.candle {
+    position: absolute;
+    bottom: 105px;
+    left: 82px;
+    width: 16px;
+    height: 45px;
+    background: #ffd166;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.flame {
+    position: absolute;
+    width: 15px;
+    height: 22px;
+    background: #ff9f1c;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    top: -18px;
+    left: 1px;
+    animation: flame 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes flame {
+    from {
+        transform: rotate(-45deg) scale(1);
+    }
+    to {
+        transform: rotate(-35deg) scale(0.8);
+    }
+}
+
+@keyframes cakeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}/* KUE LEBIH RAMAI */
+
+.cake {
+    position: relative;
+}
+
+.candle1 {
+    left: 48px;
+}
+
+.candle2 {
+    left: 82px;
+}
+
+.candle3 {
+    left: 116px;
+}
+
+.cake-top span {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    margin: 0 10px;
+    top: 4px;
+}
+
+.cream {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 10px;
+}
+
+.sparkle {
+    position: absolute;
+    z-index: 5;
+    font-size: 24px;
+    animation: sparkle 1.2s ease-in-out infinite alternate;
+}
+
+.sparkle1 {
+    left: -25px;
+    top: 30px;
+}
+
+.sparkle2 {
+    right: -25px;
+    top: 55px;
+    animation-delay: .4s;
+}
+
+.sparkle3 {
+    right: -5px;
+    top: 5px;
+    animation-delay: .8s;
+}
+
+@keyframes sparkle {
+    from {
+        transform: scale(0.7) rotate(0deg);
+        opacity: 0.4;
+    }
+
+    to {
+        transform: scale(1.3) rotate(20deg);
+        opacity: 1;
+    }
+} .cake {
+    width: 200px;
+    height: 170px;
+    margin: 30px auto;
+}
+
+.cake-body {
+    left: 25px;
+    width: 150px;
+    height: 80px;
+}
+
+.cake-top {
+    left: 20px;
+    width: 160px;
+    height: 35px;
+    bottom: 65px;
+    text-align: center;
+}
+
+.cake-top span {
+    margin: 0 5px;
+}
+
+.candle {
+    bottom: 95px;
+}
+
+.candle1 {
+    left: 55px;
+}
+
+.candle2 {
+    left: 92px;
+}
+
+.candle3 {
+    left: 129px;
+}
+
+.sparkle1 {
+    left: 0;
+}
+
+.sparkle2 {
+    right: 0;
+}
+
+.sparkle3 {
+    right: 20px;
+} .cream {
+    top: 45px;
+    left: 25px;
+    width: 150px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 6px;
+    z-index: 3;
+} .cake-top span {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 8px;
+    top: -2px;
+} .typing-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: cursorBlink 0.7s infinite;
+    font-weight: bold;
+}
+
+@keyframes cursorBlink {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}/* DEKORASI CAKE */
+
+.cream {
+    position: absolute;
+    top: 12px;
+    width: 35px;
+    height: 18px;
+    background: #fff8fb;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.cream1 {
+    left: 30px;
+}
+
+.cream2 {
+    left: 75px;
+}
+
+.cream3 {
+    left: 120px;
+}
+
+
+/* CHOCOLATE DRIP */
+
+.drip {
+    position: absolute;
+    top: 25px;
+    width: 12px;
+    height: 25px;
+    background: #8b4a3c;
+    border-radius: 0 0 10px 10px;
+    z-index: 3;
+}
+
+.drip1 {
+    left: 45px;
+}
+
+.drip2 {
+    left: 90px;
+    height: 32px;
+}
+
+.drip3 {
+    left: 130px;
+    height: 22px;
+}

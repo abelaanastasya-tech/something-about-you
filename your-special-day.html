@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         PAGE 1 - BIRTHDAY
+    ========================== -->
+
+    <section id="page1" class="page active">
+
+   <div class="cake">
+
+    <div class="sparkle sparkle1">✦</div>
+    <div class="sparkle sparkle2">✧</div>
+    <div class="sparkle sparkle3">♡</div>
+
+    <div class="candle candle1">
+        <div class="flame"></div>
+    </div>
+
+    <div class="candle candle2">
+        <div class="flame"></div>
+    </div>
+
+    <div class="candle candle3">
+        <div class="flame"></div>
+    </div>
+
+    <div class="cake-top">
+    <span>🍓</span>
+    <span>🍓</span>
+</div>
+
+    <div class="cake-body">
+
+    <div class="cream cream1"></div>
+    <div class="cream cream2"></div>
+    <div class="cream cream3"></div>
+
+    <div class="drip drip1"></div>
+    <div class="drip drip2"></div>
+    <div class="drip drip3"></div>
+
+</div>
+
+</div>
+    
+        <h1>
+            𝐇𝐚𝐩𝐩𝐲 𝐛𝐢𝐫𝐭𝐡𝐝𝐚𝐲 𝐇𝐢𝐭𝐚𝐤𝐮! 🎊🎉🎈
+        </h1>
+
+        <p>Love u more &lt;3</p>
+
+        <button onclick="goToPage(2)">
+            tap &lt;3
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         PAGE 2 - ENVELOPE
+    ========================== -->
+
+    <section id="page2" class="page">
+
+        <div class="envelope" onclick="openEnvelope()">
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-body">
+                💗
+            </div>
+
+        </div>
+
+        <p>buka disini yaww</p>
+
+        <button onclick="openEnvelope()">
+            open it &lt;3
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         PAGE 3 - LETTER
+    ========================== -->
+
+    <section id="page3" class="page">
+
+        <div class="letter">
+
+            <h2>
+                お誕生日おめでとう💖💖
+            </h2>
+
+            <div class="letter-text">
+
+                <p>
+                    celamatt ulang tahun ayangku tercintaa🌷🌷
+                    今年もう25歳になったね🥰
+                </p>
+
+                <p>
+                    Semoga di usia ini, tangki cinta ayang terisi penuh,
+                    perlahan mimpi mimpi ayang itu tumbuh💗sehat selalu ya🫶🏻
+                    sukses selalu kedepannya, makin banyak rezekinya🤲🏻
+                    terimakasih banyak buat setiap uang yg ayang kasih buat
+                    jajanin aku🥰aku ngga tau ayang mau ngucapin apa😄
+                    doa doa terbaik buat ayang udah selalu aku minta sama Allah
+                    buat ayang🥰
+                </p>
+
+                <p>
+                    いつも優しくしてくれてありがと🥹
+                    どこでも幸せにしてください🥰
+                    何があったら言うてね！
+                    マイラちゃんいつもいるから🥰🤗
+                </p>
+
+                <p>
+                    luvv uuu!!!🩷🩷🩷
+                </p>
+
+            </div>
+
+        </div>
+
+        <button onclick="goToPage(4)">
+            next &lt;3
+        </button>
+
+    </section>
+
+<!-- =========================
+     PAGE 4 - MUSIC
+========================== -->
+
+<section id="page4" class="page">
+
+    <div class="music-card">
+
+        <div class="music-cover">
+            🎵
+        </div>
+
+        <div class="music-info">
+
+            <h2>Night Changes</h2>
+
+            <p>Night Changes</p>
+
+        </div>
+
+        <div class="music-controls">
+
+            <button onclick="playMusic()">▶</button>
+
+            <button onclick="pauseMusic()">Ⅱ</button>
+
+        </div>
+
+    </div>
+
+    <!-- SPOTIFY -->
+
+    <div class="spotify-card">
+
+        <iframe
+            src="https://open.spotify.com/embed/track/5O2P9iiztwhomNh8xkR9lJ"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+
+        <a
+            href="https://open.spotify.com/intl-id/track/5O2P9iiztwhomNh8xkR9lJ"
+            target="_blank">
+            🎧 Open in Spotify
+        </a>
+
+    </div>
+</div>
+
+    <div class="song-message">
+        <p>
+            Lagu ini selalu mengingatkanku sama kamu. 🩷
+        </p>
+
+        <p>
+            So, whenever you hear this song,<br>
+            I hope you remember me too. 🎧
+        </p>
+    </div>
+
+    <button onclick="startLoveRain()">
+        one more &lt;3
+    </button>
+    <button onclick="startLoveRain()">
+        one more &lt;3
+    </button>
+
+</section>
+
+
+    <!-- =========================
+         PAGE 5 - LOVE RAIN
+    ========================== -->
+
+    <section id="page5" class="page">
+
+        <div id="heartRain"></div>
+
+        <div class="final-character">
+            ♡
+        </div>
+
+        <h1>
+            luv uuu!!! 🩷
+        </h1>
+
+        <p>
+            for you &lt;3
+        </p>
+
+    </section>
+
+
+    <!-- AUDIO -->
+
+    <audio id="music">
+    <source src="night-changes.mp3" type="audio/mpeg">
+</audio>
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
